@@ -43,7 +43,7 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: mta-app-${org}-${space}
+        xsappname: mta-app-onapsis-${space}
         tenant-mode: dedicated
   - name: mta-app-db
     type: com.sap.xs.hdi-container

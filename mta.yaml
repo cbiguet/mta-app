@@ -35,6 +35,22 @@ modules:
     requires:
       - name: mta-app-db
 
+  - name: mta-app-approuter
+    type: approuter.nodejs
+    path: approuter
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv
+          url: ~{srv-url}
+      - name: mta-app-auth
+        group: destinations
+        properties:
+          name: auth
+          url: https:// 
+          forwardAuthToken: true
+
 resources:
   - name: mta-app-auth
     type: org.cloudfoundry.managed-service

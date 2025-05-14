@@ -1,0 +1,34 @@
+[
+    {
+      "source": "/",
+      "target": "/index.html",
+      "localDir": "./app",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "/odata/(.*)",
+      "target": "srv",
+      "destination": "srv",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.admin"
+    },
+    {
+      "source": "/admin/(.*)",
+      "target": "srv",
+      "destination": "srv",
+      "authenticationType": "xsuaa",
+      "scope": "$XSAPPNAME.admin"
+    },
+    {
+      "source": "/browse/(.*)",
+      "target": "/browse/webapp/$1",
+      "localDir": "./",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "/admin-books/(.*)",
+      "target": "/admin-books/webapp/$1",
+      "localDir": "./",
+      "authenticationType": "xsuaa"
+    }
+  ]
